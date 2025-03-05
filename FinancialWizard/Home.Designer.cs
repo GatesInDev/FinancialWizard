@@ -28,82 +28,93 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.GerenciarFinancasButton = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnMenu = new MetroFramework.Controls.MetroButton();
+            this.btnToggleTheme = new MetroFramework.Controls.MetroToggle();
+            this.pnlMenu.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.GerenciarFinancasButton);
-            this.flowLayoutPanel1.Controls.Add(this.button5);
-            this.flowLayoutPanel1.Controls.Add(this.button2);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(201, 101);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(406, 260);
-            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // GerenciarFinancasButton
             // 
             this.GerenciarFinancasButton.Image = global::FinancialWizard.Properties.Resources.dolar_da_fatura_do_arquivo;
             this.GerenciarFinancasButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.GerenciarFinancasButton.Location = new System.Drawing.Point(3, 3);
+            this.GerenciarFinancasButton.Location = new System.Drawing.Point(25, 5);
+            this.GerenciarFinancasButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GerenciarFinancasButton.Name = "GerenciarFinancasButton";
-            this.GerenciarFinancasButton.Size = new System.Drawing.Size(115, 84);
+            this.GerenciarFinancasButton.Size = new System.Drawing.Size(231, 136);
             this.GerenciarFinancasButton.TabIndex = 0;
             this.GerenciarFinancasButton.Text = "Manage Finances";
             this.GerenciarFinancasButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.GerenciarFinancasButton.UseVisualStyleBackColor = true;
             this.GerenciarFinancasButton.Click += new System.EventHandler(this.btnManageFinances_Click);
             // 
-            // button5
+            // pnlMenu
             // 
-            this.button5.Image = global::FinancialWizard.Properties.Resources.download_de_pasta;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(124, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(115, 84);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Gerenciar Finanças";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.UseVisualStyleBackColor = true;
+            this.pnlMenu.Controls.Add(this.btnToggleTheme);
+            this.pnlMenu.Controls.Add(this.GerenciarFinancasButton);
+            this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlMenu.Location = new System.Drawing.Point(0, 48);
+            this.pnlMenu.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlMenu.Name = "pnlMenu";
+            this.pnlMenu.Size = new System.Drawing.Size(260, 672);
+            this.pnlMenu.TabIndex = 1;
             // 
-            // button2
+            // btnMenu
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::FinancialWizard.Properties.Resources.download_de_pasta;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(245, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 84);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Exportar Planilhas";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnMenu.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnMenu.Location = new System.Drawing.Point(265, 53);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(50, 50);
+            this.btnMenu.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnMenu.TabIndex = 2;
+            this.btnMenu.Text = "✖";
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
+            // btnToggleTheme
+            // 
+            this.btnToggleTheme.AutoSize = true;
+            this.btnToggleTheme.DisplayStatus = false;
+            this.btnToggleTheme.Location = new System.Drawing.Point(194, 606);
+            this.btnToggleTheme.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnToggleTheme.Name = "btnToggleTheme";
+            this.btnToggleTheme.Size = new System.Drawing.Size(50, 25);
+            this.btnToggleTheme.TabIndex = 1;
+            this.btnToggleTheme.Text = "Off";
+            this.btnToggleTheme.UseVisualStyleBackColor = true;
+            this.btnToggleTheme.Click += new System.EventHandler(this.btnToggleTheme_Click);
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnMenu);
+            this.Controls.Add(this.pnlMenu);
+            this.DisplayHeader = false;
+            this.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.Black;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Movable = false;
             this.Name = "Home";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Financial Wizard";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.Padding = new System.Windows.Forms.Padding(0, 48, 0, 0);
+            this.Resizable = false;
+            this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.Load += new System.EventHandler(this.HomeOnLoad);
+            this.pnlMenu.ResumeLayout(false);
+            this.pnlMenu.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button GerenciarFinancasButton;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel pnlMenu;
+        private MetroFramework.Controls.MetroButton btnMenu;
+        private MetroFramework.Controls.MetroToggle btnToggleTheme;
     }
 }
 
